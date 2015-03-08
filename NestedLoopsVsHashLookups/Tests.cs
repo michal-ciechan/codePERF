@@ -126,7 +126,7 @@ namespace NestedLoopsVsHashLookups
         [TestCase(100000, 1000)]
         [TestCase(100000, 10000)]
         [TestCase(100000, 100000)]
-        public void HashLookupIntTest(int aCount, int bCount)
+        public void HashLookupStringTest(int aCount, int bCount)
         {
             _listA = CreateXRandomClassA(aCount);
             _listB = CreateXRandomClassB(bCount);
