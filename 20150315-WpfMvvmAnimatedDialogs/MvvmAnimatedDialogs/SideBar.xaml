@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="MvvmAnimatedDialogs.SideBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="500" d:DesignWidth="300"
+             d:DataContext="{d:DesignInstance d:Type=vm:MainViewModel}">
+    <StackPanel DockPanel.Dock="Right" Width="100" Margin="10">
+        <StackPanel.Resources>
+            <Style TargetType="{x:Type Viewbox}">
+                <Setter Property="Stretch" Value="Uniform" />
+                <Setter Property="MaxHeight" Value="65" />
+            </Style>
+        </StackPanel.Resources>
+        <Viewbox>
+            <TextBlock Text="C#" />
+        </Viewbox>
+        <Viewbox>
+            <TextBlock Text=".NET" />
+        </Viewbox>
+        <Viewbox>
+            <TextBlock Text="Blog" />
+        </Viewbox>
+        <Viewbox>
+            <TextBlock Text="Written By" />
+        </Viewbox>
+        <Viewbox>
+            <TextBlock Text="Michal" />
+        </Viewbox>
+        <Viewbox>
+            <TextBlock Text="Ciechan" />
+        </Viewbox>
+        <Button BorderBrush="MediumPurple" Background="{StaticResource PurpleBrush}" Foreground="White" Command="{Binding CommandAboutMe}">About Me</Button>
+    </StackPanel>
+</UserControl>
