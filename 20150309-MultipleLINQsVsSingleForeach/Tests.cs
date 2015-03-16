@@ -332,7 +332,9 @@ namespace MultipleLINQsVsSingleForeach
             list.Add(item);
         }
 
-        private static void GetValueOrAdd<TKey>(Dictionary<TKey, ClassA[]> dic, ClassA item,
+        private static void GetValueOrAdd<TKey>(
+            Dictionary<TKey, ClassA[]> dic, 
+            ClassA item,
             Func<ClassA, TKey> keySelector)
         {
             ClassA[] list;
