@@ -69,6 +69,14 @@ namespace MoqInjectionContainer
             return mock;
         }
 
+        public void VerifyAll()
+        {
+            foreach (var mock in Mocks.Values)
+            {
+                mock.VerifyAll();
+            }
+        }
+
         internal Mock Of(Type type)
         {
             if (Mocks.ContainsKey(type))

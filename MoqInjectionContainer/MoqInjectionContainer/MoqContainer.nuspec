@@ -14,4 +14,8 @@
     <copyright>Copyright 2015</copyright>
     <tags>Moq Factory Repository Container Resolve Verify Moqqer</tags>
   </metadata>
+  <files>
+    <file src="bin\Release\net40\MoqInjectionContainer.*" target="lib\net40\" />
+    <file src="bin\Release\net45\MoqInjectionContainer.*" target="lib\net45\" />
+  </files>
 </package>
