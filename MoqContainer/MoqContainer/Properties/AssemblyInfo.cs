@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("MoqContainer")]
-[assembly: AssemblyDescription("A Moq.Mock<> Factory/Repository that acts like a IoC Container and creates default mocks which all you have to do is verify.")]
+[assembly: AssemblyDescription("A Moq.Mock Factory/Repository that acts like a IoC Container and creates default mocks which all you have to do is verify.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Michal Ciechan @ Codeperf.net")]
 [assembly: AssemblyProduct("MoqContainer")]
