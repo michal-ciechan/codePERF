@@ -1,4 +1,4 @@
-﻿namespace MoqContainerTests
+﻿namespace MoqInjectionContainerTests.Helpers
 {
     public class SomeClass
     {

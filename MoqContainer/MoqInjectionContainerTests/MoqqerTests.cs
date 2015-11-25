@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Moq;
-using MoqContainer;
+﻿using Moq;
+using MoqInjectionContainer;
+using MoqInjectionContainerTests.Helpers;
 using NUnit.Framework;
 
-namespace MoqContainerTests
+namespace MoqInjectionContainerTests
 {
     [TestFixture]
     public class MoqqerTests
