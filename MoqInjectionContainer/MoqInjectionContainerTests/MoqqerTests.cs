@@ -1,4 +1,8 @@
-﻿using Moq;
+﻿using System;
+using System.Linq;
+using System.Reflection;
+using FluentAssertions;
+using Moq;
 using MoqInjectionContainer;
 using MoqInjectionContainerTests.Helpers;
 using NUnit.Framework;
@@ -8,25 +12,36 @@ namespace MoqInjectionContainerTests
     [TestFixture]
     public class MoqqerTests
     {
+        private MockRepository _factory;
         private Moqqer _moq;
         private SomeClass _subject;
-        private MockRepository _factory;
 
         [SetUp]
-        public void Setup()
+        public void A_Setup()
         {
             _moq = new Moqqer();
 
-
-            _factory = new MockRepository(MockBehavior.Default) { DefaultValue = DefaultValue.Mock };
-
-
-
-
+            _factory = new MockRepository(MockBehavior.Default) {DefaultValue = DefaultValue.Mock};
 
             _subject = _moq.Get<SomeClass>();
         }
 
+
+        [Test]
+        public void CallA_CallsDependencyA()
+        {
+            _subject.CallA();
+
+            _moq.Of<IDepencyA>().Verify(x => x.Call(), Times.Once);
+        }
+
+        [Test]
+        public void Mock_Call_ParameterlessMethod_ReturningInterface_ReturnsMockedInterface()
+        {
+            var res = _subject.Mock.GetA();
+
+            res.Should().NotBeNull();
+        }
 
 
         [Test]
@@ -34,18 +49,42 @@ namespace MoqInjectionContainerTests
         {
             _subject.CallA();
 
-            _factory.Create<IDepencyA>().Verify(x => x.Call(),Times.Once);
+            _factory.Create<IDepencyA>().Verify(x => x.Call(), Times.Once);
         }
-    
 
-    [Test]
-        public void CallA_CallsDependencyA()
+        [Test]
+        public void Type_GetMethods_ReturnsAllPublic()
         {
+            var type = typeof (SomeClass);
 
-            _subject.CallA();
+            var res = type.GetMethods(BindingFlags.Public | BindingFlags.Instance);
 
+            foreach (var methodInfo in res)
+            {
+                Console.WriteLine(methodInfo.Name);
+            }
+        }
 
-            _moq.Of<IDepencyA>().Verify(x => x.Call(), Times.Once);
+        [Test]
+        public void GetMockableMethods_SomeClass_ReturnsAllPublic()
+        {
+            var type = typeof (IMockSetup);
+
+            var methods = Moqqer.GetMockableMethods(type).Select(x => x.Name).ToList();
+
+            methods.Should().BeEquivalentTo(new [] {"GetA", "GetB"});
+        }
+
+        [Test]
+        public void SetupMockMethods_SomeClassGetA_ShouldNotBeNull()
+        {
+            var mock = new Mock<IMockSetup>();
+
+            var type = typeof (IMockSetup);
+
+            _moq.SetupMockMethods(mock, type);
+
+            mock.Object.GetA().Should().NotBeNull();
         }
     }
 }
