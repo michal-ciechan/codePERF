@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Michal.Ciechan.Core", "Michal.Ciechan.Library\Michal.Ciechan.Core.csproj", "{8F013165-6452-432F-A6C7-2C86E8FBC77D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Michal.Ciechan.Core.Tests", "Michal.Ciechan.Library.Tests\Michal.Ciechan.Core.Tests.csproj", "{B6BABD9F-62BB-4CE1-A740-D70F8D39BFC2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F013165-6452-432F-A6C7-2C86E8FBC77D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F013165-6452-432F-A6C7-2C86E8FBC77D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F013165-6452-432F-A6C7-2C86E8FBC77D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F013165-6452-432F-A6C7-2C86E8FBC77D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6BABD9F-62BB-4CE1-A740-D70F8D39BFC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6BABD9F-62BB-4CE1-A740-D70F8D39BFC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6BABD9F-62BB-4CE1-A740-D70F8D39BFC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6BABD9F-62BB-4CE1-A740-D70F8D39BFC2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
