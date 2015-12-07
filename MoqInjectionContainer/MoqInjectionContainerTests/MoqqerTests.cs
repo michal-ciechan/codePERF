@@ -42,16 +42,7 @@ namespace MoqInjectionContainerTests
 
             res.Should().NotBeNull();
         }
-
-
-        [Test]
-        public void MockRepo_CallA_CallsDependencyA()
-        {
-            _subject.CallA();
-
-            _factory.Create<IDepencyA>().Verify(x => x.Call(), Times.Once);
-        }
-
+        
         [Test]
         public void Type_GetMethods_ReturnsAllPublic()
         {
@@ -85,6 +76,23 @@ namespace MoqInjectionContainerTests
             _moq.SetupMockMethods(mock, type);
 
             mock.Object.GetA().Should().NotBeNull();
+        }
+
+        [Test]
+        public void MockOf_IInterfaceWithGenericMethod_CanSetup()
+        {
+            var res = _moq.Of<IInterfaceWithGenericMethod>();
+        }
+
+
+        [Test]
+        public void GetMockableMethods_IInterfaceWithGenericMethod_DoesNotReturnGenericMethod()
+        {
+            var type = typeof(IInterfaceWithGenericMethod);
+
+            var methods = Moqqer.GetMockableMethods(type).Select(x => x.Name).ToList();
+
+            methods.Should().BeEmpty();
         }
     }
 }

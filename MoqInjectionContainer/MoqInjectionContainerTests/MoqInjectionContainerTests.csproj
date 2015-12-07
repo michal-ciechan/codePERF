@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helpers\IMockSetup.cs" />
+    <Compile Include="Helpers\IInterfaceWithGenericMethod.cs" />
     <Compile Include="Helpers\IParameterisedMethodClass.cs" />
     <Compile Include="MoqqerTests.cs" />
     <Compile Include="Helpers\IDepencyA.cs" />

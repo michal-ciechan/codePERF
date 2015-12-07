@@ -149,7 +149,7 @@ namespace MoqInjectionContainer
         {
             return type
                 .GetMethods(BindingFlags.Public | BindingFlags.Instance)
-                .Where(x => x.ReturnType.IsInterface);
+                .Where(x => x.ReturnType.IsInterface && !x.IsGenericMethod && !x.IsGenericMethodDefinition);
         }
 
         private object[] CreateParameters(ConstructorInfo ctor)

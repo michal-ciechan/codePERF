@@ -48,5 +48,18 @@ namespace MoqInjectionContainerTests
 
             res.Should().Be("Any");
         }
+
+        [Test]
+        public void Moq_Setup_IsAny_CallsAany()
+        {
+            var mock = new Mock<IParameterisedMethodClass>();
+
+            mock.Setup(q => q.Call(It.IsAny<int>())).Returns("Any");
+
+
+            var res = mock.Object.Call(25);
+
+            res.Should().Be("Any");
+        }
     }
 }
