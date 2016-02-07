@@ -92,7 +92,7 @@ namespace MoqInjectionContainer
             
             var res = ctor.Invoke(null);
 
-            Objects.Add(type, ctor);
+            Objects.Add(type, res);
 
             return res;
         }
