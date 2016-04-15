@@ -57,6 +57,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\ClassWithCtorContainingClassWithoutParameterlessCtor.cs" />
+    <Compile Include="Helpers\ClassWithCtorContainingClassWithParameterlessCtor.cs" />
+    <Compile Include="Helpers\ClassWithNonVirtualInterfaceProperty.cs" />
+    <Compile Include="Helpers\ClassWithNonVirtualNullableProperty.cs" />
+    <Compile Include="Helpers\ClassWithNonVirtualProperty.cs" />
+    <Compile Include="Helpers\ClassWithoutParameterlessCtor.cs" />
+    <Compile Include="Helpers\ClassWithParameterlessCtor.cs" />
     <Compile Include="Helpers\IMockSetup.cs" />
     <Compile Include="Helpers\IInterfaceWithGenericMethod.cs" />
     <Compile Include="Helpers\IParameterisedMethodClass.cs" />

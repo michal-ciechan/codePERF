@@ -6,6 +6,7 @@ using Moq;
 using MoqInjectionContainer;
 using MoqInjectionContainerTests.Helpers;
 using NUnit.Framework;
+using NUnit.Framework.Internal;
 
 namespace MoqInjectionContainerTests
 {
@@ -23,7 +24,7 @@ namespace MoqInjectionContainerTests
 
             _factory = new MockRepository(MockBehavior.Default) {DefaultValue = DefaultValue.Mock};
 
-            _subject = _moq.Get<SomeClass>();
+            _subject = _moq.Create<SomeClass>();
         }
 
 
@@ -57,13 +58,44 @@ namespace MoqInjectionContainerTests
         }
 
         [Test]
-        public void GetMockableMethods_SomeClass_ReturnsAllPublic()
+        public void GetMockableMethods_IMockSetup_ReturnsAllPublic()
         {
             var type = typeof (IMockSetup);
 
             var methods = Moqqer.GetMockableMethods(type).Select(x => x.Name).ToList();
 
             methods.Should().BeEquivalentTo(new [] {"GetA", "GetB"});
+        }
+
+
+        [Test]
+        public void GetMockableMethods_ClassWithNonVirtualProperty_ReturnsAllPublic()
+        {
+            var type = typeof(ClassWithNonVirtualProperty);
+
+            var methods = Moqqer.GetMockableMethods(type).Select(x => x.Name).ToList();
+
+            methods.Should().BeEquivalentTo();
+        }
+
+        [Test]
+        public void GetMockableMethods_ClassWithNonVirtualNullableProperty_ReturnsAllPublic()
+        {
+            var type = typeof(ClassWithNonVirtualNullableProperty);
+
+            var methods = Moqqer.GetMockableMethods(type).Select(x => x.Name).ToList();
+
+            methods.Should().BeEquivalentTo();
+        }
+
+        [Test]
+        public void GetMockableMethods_ClassWithNonVirtualInterfaceProperty_ReturnsAllPublic()
+        {
+            var type = typeof(ClassWithNonVirtualInterfaceProperty);
+
+            var methods = Moqqer.GetMockableMethods(type).Select(x => x.Name).ToList();
+
+            methods.Should().BeEquivalentTo();
         }
 
         [Test]
@@ -78,12 +110,59 @@ namespace MoqInjectionContainerTests
             mock.Object.GetA().Should().NotBeNull();
         }
 
+
+        [Test]
+        public void Object_ClassWithCtorContainingClassWithParameterlessCtor_ShouldReturn()
+        {
+            TestDelegate action =
+                () => _moq.Object<ClassWithCtorContainingClassWithParameterlessCtor>();
+
+            Assert.That(action, Throws.TypeOf<MoqqerException>());
+        }
+
+
+        [Test]
+        public void Object_ClassWithCtorContainingClassWithParameterlessCtor_ShouldInjectDefaultObject()
+        {
+            TestDelegate action =
+                () => _moq.Object<ClassWithCtorContainingClassWithParameterlessCtor>();
+
+            Assert.That(action, Throws.TypeOf<MoqqerException>());
+
+        }
+
+        [Test]
+        public void Object_ClassWithCtorContainingClassWithoutParameterlessCtor_ShouldThrowException()
+        {
+            TestDelegate action =
+                () => _moq.Object<ClassWithCtorContainingClassWithoutParameterlessCtor>();
+
+            Assert.That(action, Throws.TypeOf<MoqqerException>());
+        }
+
         [Test]
         public void MockOf_IInterfaceWithGenericMethod_CanSetup()
         {
             var res = _moq.Of<IInterfaceWithGenericMethod>();
         }
 
+        [Test]
+        public void MockGet_ClassWithNonVirtualProperty_CanSetup()
+        {
+            var res = _moq.Create<ClassWithNonVirtualProperty>();
+        }
+
+        [Test]
+        public void MockGet_ClassWithNonVirtualNullableProperty_CanSetup()
+        {
+            var res = _moq.Create<ClassWithNonVirtualNullableProperty>();
+        }
+
+        [Test]
+        public void MockGet_ClassWithNonVirtualInterfaceProperty_CanSetup()
+        {
+            var res = _moq.Of<ClassWithNonVirtualInterfaceProperty>();
+        }
 
         [Test]
         public void GetMockableMethods_IInterfaceWithGenericMethod_DoesNotReturnGenericMethod()
@@ -94,5 +173,6 @@ namespace MoqInjectionContainerTests
 
             methods.Should().BeEmpty();
         }
+
     }
 }
