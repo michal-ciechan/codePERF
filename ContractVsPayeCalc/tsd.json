@@ -1,0 +1,84 @@
+{
+  "version": "v4",
+  "repo": "borisyankov/DefinitelyTyped",
+  "ref": "master",
+  "path": "typings",
+  "bundle": "typings/tsd.d.ts",
+  "installed": {
+    "node/node.d.ts": {
+      "commit": "de8e80dfe5360fef44d00c41257d5ef37add000a"
+    },
+    "redux/redux.d.ts": {
+      "commit": "94d8775a947f626269b06ccadd6f5e61839389d0"
+    },
+    "redux-immutable/redux-immutable.d.ts": {
+      "commit": "94d8775a947f626269b06ccadd6f5e61839389d0"
+    },
+    "webpack/webpack.d.ts": {
+      "commit": "94d8775a947f626269b06ccadd6f5e61839389d0"
+    },
+    "source-map/source-map.d.ts": {
+      "commit": "94d8775a947f626269b06ccadd6f5e61839389d0"
+    },
+    "react/react-dom.d.ts": {
+      "commit": "544a35a10866b32afda9c7f029c0764558563f4f"
+    },
+    "react-redux/react-redux.d.ts": {
+      "commit": "94d8775a947f626269b06ccadd6f5e61839389d0"
+    },
+    "react/react.d.ts": {
+      "commit": "544a35a10866b32afda9c7f029c0764558563f4f"
+    },
+    "uglify-js/uglify-js.d.ts": {
+      "commit": "94d8775a947f626269b06ccadd6f5e61839389d0"
+    },
+    "mime/mime.d.ts": {
+      "commit": "94d8775a947f626269b06ccadd6f5e61839389d0"
+    },
+    "serve-static/serve-static.d.ts": {
+      "commit": "94d8775a947f626269b06ccadd6f5e61839389d0"
+    },
+    "express/express.d.ts": {
+      "commit": "94d8775a947f626269b06ccadd6f5e61839389d0"
+    },
+    "log4js/log4js.d.ts": {
+      "commit": "94d8775a947f626269b06ccadd6f5e61839389d0"
+    },
+    "karma/karma.d.ts": {
+      "commit": "94d8775a947f626269b06ccadd6f5e61839389d0"
+    },
+    "bluebird/bluebird.d.ts": {
+      "commit": "94d8775a947f626269b06ccadd6f5e61839389d0"
+    },
+    "express-serve-static-core/express-serve-static-core.d.ts": {
+      "commit": "94d8775a947f626269b06ccadd6f5e61839389d0"
+    },
+    "karma-jasmine/karma-jasmine.d.ts": {
+      "commit": "94d8775a947f626269b06ccadd6f5e61839389d0"
+    },
+    "jasmine/jasmine.d.ts": {
+      "commit": "94d8775a947f626269b06ccadd6f5e61839389d0"
+    },
+    "mocha/mocha.d.ts": {
+      "commit": "94d8775a947f626269b06ccadd6f5e61839389d0"
+    },
+    "browserify/browserify.d.ts": {
+      "commit": "de8e80dfe5360fef44d00c41257d5ef37add000a"
+    },
+    "assertion-error/assertion-error.d.ts": {
+      "commit": "8363db45d123981d6612ed40289a4d29e9b47401"
+    },
+    "chai/chai.d.ts": {
+      "commit": "8363db45d123981d6612ed40289a4d29e9b47401"
+    },
+    "expect/expect.d.ts": {
+      "commit": "3a6d3932540ec87e00475012e0336fec28996047"
+    },
+    "deep-freeze/deep-freeze.d.ts": {
+      "commit": "bfc96c0e3414238f7d1f2d313ec7d0803a3953fc"
+    },
+    "linq/linq.d.ts": {
+      "commit": "544a35a10866b32afda9c7f029c0764558563f4f"
+    }
+  }
+}

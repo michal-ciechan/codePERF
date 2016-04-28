@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{59e9f495-a862-4c15-8676-4d95c6b4d005}</ProjectGuid>
+    <ProjectHome />
+    <ProjectView>ShowAllFiles</ProjectView>
+    <StartupFile>server.js</StartupFile>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <ItemGroup>
+    <Content Include="index.html" />
+    <Content Include="package.json" />
+    <Content Include="tsconfig.json" />
+    <Content Include="typings.json" />
+    <Content Include="README.md" />
+    <Compile Include="server.js" />
+    <Compile Include="webpack.config.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src" />
+    <Folder Include="src\inputs" />
+    <Folder Include="typings\" />
+    <Folder Include="typings\assertion-error\" />
+    <Folder Include="typings\bluebird\" />
+    <Folder Include="typings\browserify\" />
+    <Folder Include="typings\chai\" />
+    <Folder Include="typings\deep-freeze\" />
+    <Folder Include="typings\expect\" />
+    <Folder Include="typings\express-serve-static-core\" />
+    <Folder Include="typings\express\" />
+    <Folder Include="typings\karma-jasmine\" />
+    <Folder Include="typings\karma\" />
+    <Folder Include="typings\linq\" />
+    <Folder Include="typings\log4js\" />
+    <Folder Include="typings\mime\" />
+    <Folder Include="typings\mocha\" />
+    <Folder Include="typings\node\" />
+    <Folder Include="typings\react-redux\" />
+    <Folder Include="typings\react\" />
+    <Folder Include="typings\redux-immutable\" />
+    <Folder Include="typings\redux\" />
+    <Folder Include="typings\serve-static\" />
+    <Folder Include="typings\source-map\" />
+    <Folder Include="typings\uglify-js\" />
+    <Folder Include="typings\webpack\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="typings\assertion-error\assertion-error.d.ts" />
+    <TypeScriptCompile Include="typings\assertion-error\assertion-error.d.ts" />
+    <TypeScriptCompile Include="typings\assertion-error\assertion-error.d.ts" />
+    <TypeScriptCompile Include="typings\assertion-error\assertion-error.d.ts" />
+    <TypeScriptCompile Include="typings\assertion-error\assertion-error.d.ts" />
+    <TypeScriptCompile Include="typings\bluebird\bluebird.d.ts" />
+    <TypeScriptCompile Include="typings\bluebird\bluebird.d.ts" />
+    <TypeScriptCompile Include="typings\bluebird\bluebird.d.ts" />
+    <TypeScriptCompile Include="typings\bluebird\bluebird.d.ts" />
+    <TypeScriptCompile Include="typings\bluebird\bluebird.d.ts" />
+    <TypeScriptCompile Include="typings\browserify\browserify.d.ts" />
+    <TypeScriptCompile Include="typings\browserify\browserify.d.ts" />
+    <TypeScriptCompile Include="typings\browserify\browserify.d.ts" />
+    <TypeScriptCompile Include="typings\browserify\browserify.d.ts" />
+    <TypeScriptCompile Include="typings\browserify\browserify.d.ts" />
+    <TypeScriptCompile Include="typings\chai\chai.d.ts" />
+    <TypeScriptCompile Include="typings\chai\chai.d.ts" />
+    <TypeScriptCompile Include="typings\chai\chai.d.ts" />
+    <TypeScriptCompile Include="typings\chai\chai.d.ts" />
+    <TypeScriptCompile Include="typings\chai\chai.d.ts" />
+    <TypeScriptCompile Include="typings\deep-freeze\deep-freeze.d.ts" />
+    <TypeScriptCompile Include="typings\deep-freeze\deep-freeze.d.ts" />
+    <TypeScriptCompile Include="typings\deep-freeze\deep-freeze.d.ts" />
+    <TypeScriptCompile Include="typings\deep-freeze\deep-freeze.d.ts" />
+    <TypeScriptCompile Include="typings\deep-freeze\deep-freeze.d.ts" />
+    <TypeScriptCompile Include="typings\expect\expect.d.ts" />
+    <TypeScriptCompile Include="typings\expect\expect.d.ts" />
+    <TypeScriptCompile Include="typings\expect\expect.d.ts" />
+    <TypeScriptCompile Include="typings\expect\expect.d.ts" />
+    <TypeScriptCompile Include="typings\expect\expect.d.ts" />
+    <TypeScriptCompile Include="typings\express-serve-static-core\express-serve-static-core.d.ts" />
+    <TypeScriptCompile Include="typings\express-serve-static-core\express-serve-static-core.d.ts" />
+    <TypeScriptCompile Include="typings\express-serve-static-core\express-serve-static-core.d.ts" />
+    <TypeScriptCompile Include="typings\express-serve-static-core\express-serve-static-core.d.ts" />
+    <TypeScriptCompile Include="typings\express-serve-static-core\express-serve-static-core.d.ts" />
+    <TypeScriptCompile Include="typings\express\express.d.ts" />
+    <TypeScriptCompile Include="typings\express\express.d.ts" />
+    <TypeScriptCompile Include="typings\express\express.d.ts" />
+    <TypeScriptCompile Include="typings\express\express.d.ts" />
+    <TypeScriptCompile Include="typings\express\express.d.ts" />
+    <TypeScriptCompile Include="typings\jasmine\jasmine.d.ts" />
+    <TypeScriptCompile Include="typings\jasmine\jasmine.d.ts" />
+    <TypeScriptCompile Include="typings\jasmine\jasmine.d.ts" />
+    <TypeScriptCompile Include="typings\jasmine\jasmine.d.ts" />
+    <TypeScriptCompile Include="typings\karma-jasmine\karma-jasmine.d.ts" />
+    <TypeScriptCompile Include="typings\karma-jasmine\karma-jasmine.d.ts" />
+    <TypeScriptCompile Include="typings\karma-jasmine\karma-jasmine.d.ts" />
+    <TypeScriptCompile Include="typings\karma-jasmine\karma-jasmine.d.ts" />
+    <TypeScriptCompile Include="typings\karma-jasmine\karma-jasmine.d.ts" />
+    <TypeScriptCompile Include="typings\karma\karma.d.ts" />
+    <TypeScriptCompile Include="typings\karma\karma.d.ts" />
+    <TypeScriptCompile Include="typings\karma\karma.d.ts" />
+    <TypeScriptCompile Include="typings\karma\karma.d.ts" />
+    <TypeScriptCompile Include="typings\karma\karma.d.ts" />
+    <TypeScriptCompile Include="typings\linq\linq.d.ts" />
+    <TypeScriptCompile Include="typings\linq\linq.d.ts" />
+    <TypeScriptCompile Include="typings\linq\linq.d.ts" />
+    <TypeScriptCompile Include="typings\linq\linq.d.ts" />
+    <TypeScriptCompile Include="typings\linq\linq.d.ts" />
+    <TypeScriptCompile Include="typings\log4js\log4js.d.ts" />
+    <TypeScriptCompile Include="typings\log4js\log4js.d.ts" />
+    <TypeScriptCompile Include="typings\log4js\log4js.d.ts" />
+    <TypeScriptCompile Include="typings\log4js\log4js.d.ts" />
+    <TypeScriptCompile Include="typings\log4js\log4js.d.ts" />
+    <TypeScriptCompile Include="typings\mime\mime.d.ts" />
+    <TypeScriptCompile Include="typings\mime\mime.d.ts" />
+    <TypeScriptCompile Include="typings\mime\mime.d.ts" />
+    <TypeScriptCompile Include="typings\mime\mime.d.ts" />
+    <TypeScriptCompile Include="typings\mime\mime.d.ts" />
+    <TypeScriptCompile Include="typings\mocha\mocha.d.ts" />
+    <TypeScriptCompile Include="typings\mocha\mocha.d.ts" />
+    <TypeScriptCompile Include="typings\mocha\mocha.d.ts" />
+    <TypeScriptCompile Include="typings\mocha\mocha.d.ts" />
+    <TypeScriptCompile Include="typings\mocha\mocha.d.ts" />
+    <TypeScriptCompile Include="typings\node\node.d.ts" />
+    <TypeScriptCompile Include="typings\node\node.d.ts" />
+    <TypeScriptCompile Include="typings\node\node.d.ts" />
+    <TypeScriptCompile Include="typings\node\node.d.ts" />
+    <TypeScriptCompile Include="typings\node\node.d.ts" />
+    <TypeScriptCompile Include="typings\node\node.d.ts" />
+    <TypeScriptCompile Include="typings\node\node.d.ts" />
+    <TypeScriptCompile Include="typings\react-redux\react-redux.d.ts" />
+    <TypeScriptCompile Include="typings\react-redux\react-redux.d.ts" />
+    <TypeScriptCompile Include="typings\react-redux\react-redux.d.ts" />
+    <TypeScriptCompile Include="typings\react-redux\react-redux.d.ts" />
+    <TypeScriptCompile Include="typings\react-redux\react-redux.d.ts" />
+    <TypeScriptCompile Include="typings\react-redux\react-redux.d.ts" />
+    <TypeScriptCompile Include="typings\react-redux\react-redux.d.ts" />
+    <TypeScriptCompile Include="typings\react\react-dom.d.ts" />
+    <TypeScriptCompile Include="typings\react\react-dom.d.ts" />
+    <TypeScriptCompile Include="typings\react\react-dom.d.ts" />
+    <TypeScriptCompile Include="typings\react\react-dom.d.ts" />
+    <TypeScriptCompile Include="typings\react\react-dom.d.ts" />
+    <TypeScriptCompile Include="typings\react\react-dom.d.ts" />
+    <TypeScriptCompile Include="typings\react\react-dom.d.ts" />
+    <TypeScriptCompile Include="typings\react\react.d.ts" />
+    <TypeScriptCompile Include="typings\react\react.d.ts" />
+    <TypeScriptCompile Include="typings\react\react.d.ts" />
+    <TypeScriptCompile Include="typings\react\react.d.ts" />
+    <TypeScriptCompile Include="typings\react\react.d.ts" />
+    <TypeScriptCompile Include="typings\react\react.d.ts" />
+    <TypeScriptCompile Include="typings\react\react.d.ts" />
+    <TypeScriptCompile Include="typings\redux-immutable\redux-immutable.d.ts" />
+    <TypeScriptCompile Include="typings\redux-immutable\redux-immutable.d.ts" />
+    <TypeScriptCompile Include="typings\redux-immutable\redux-immutable.d.ts" />
+    <TypeScriptCompile Include="typings\redux-immutable\redux-immutable.d.ts" />
+    <TypeScriptCompile Include="typings\redux-immutable\redux-immutable.d.ts" />
+    <TypeScriptCompile Include="typings\redux-immutable\redux-immutable.d.ts" />
+    <TypeScriptCompile Include="typings\redux-immutable\redux-immutable.d.ts" />
+    <TypeScriptCompile Include="typings\redux\redux.d.ts" />
+    <TypeScriptCompile Include="typings\redux\redux.d.ts" />
+    <TypeScriptCompile Include="typings\redux\redux.d.ts" />
+    <TypeScriptCompile Include="typings\redux\redux.d.ts" />
+    <TypeScriptCompile Include="typings\redux\redux.d.ts" />
+    <TypeScriptCompile Include="typings\redux\redux.d.ts" />
+    <TypeScriptCompile Include="typings\redux\redux.d.ts" />
+    <TypeScriptCompile Include="typings\serve-static\serve-static.d.ts" />
+    <TypeScriptCompile Include="typings\serve-static\serve-static.d.ts" />
+    <TypeScriptCompile Include="typings\serve-static\serve-static.d.ts" />
+    <TypeScriptCompile Include="typings\serve-static\serve-static.d.ts" />
+    <TypeScriptCompile Include="typings\serve-static\serve-static.d.ts" />
+    <TypeScriptCompile Include="typings\source-map\source-map.d.ts" />
+    <TypeScriptCompile Include="typings\source-map\source-map.d.ts" />
+    <TypeScriptCompile Include="typings\source-map\source-map.d.ts" />
+    <TypeScriptCompile Include="typings\source-map\source-map.d.ts" />
+    <TypeScriptCompile Include="typings\source-map\source-map.d.ts" />
+    <TypeScriptCompile Include="typings\source-map\source-map.d.ts" />
+    <TypeScriptCompile Include="typings\source-map\source-map.d.ts" />
+    <TypeScriptCompile Include="typings\tsd.d.ts" />
+    <TypeScriptCompile Include="typings\tsd.d.ts" />
+    <TypeScriptCompile Include="typings\tsd.d.ts" />
+    <TypeScriptCompile Include="typings\tsd.d.ts" />
+    <TypeScriptCompile Include="typings\tsd.d.ts" />
+    <TypeScriptCompile Include="typings\tsd.d.ts" />
+    <TypeScriptCompile Include="typings\tsd.d.ts" />
+    <TypeScriptCompile Include="typings\uglify-js\uglify-js.d.ts" />
+    <TypeScriptCompile Include="typings\uglify-js\uglify-js.d.ts" />
+    <TypeScriptCompile Include="typings\uglify-js\uglify-js.d.ts" />
+    <TypeScriptCompile Include="typings\uglify-js\uglify-js.d.ts" />
+    <TypeScriptCompile Include="typings\uglify-js\uglify-js.d.ts" />
+    <TypeScriptCompile Include="typings\uglify-js\uglify-js.d.ts" />
+    <TypeScriptCompile Include="typings\uglify-js\uglify-js.d.ts" />
+    <TypeScriptCompile Include="typings\webpack\webpack.d.ts" />
+    <TypeScriptCompile Include="typings\webpack\webpack.d.ts" />
+    <TypeScriptCompile Include="typings\webpack\webpack.d.ts" />
+    <TypeScriptCompile Include="typings\webpack\webpack.d.ts" />
+    <TypeScriptCompile Include="typings\webpack\webpack.d.ts" />
+    <TypeScriptCompile Include="typings\webpack\webpack.d.ts" />
+    <TypeScriptCompile Include="typings\webpack\webpack.d.ts" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <!--Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them.-->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
