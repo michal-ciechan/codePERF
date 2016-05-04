@@ -6,13 +6,15 @@ import { FIELDS, ForceRecalc } from './actions'
 
 // Initial Field Values
 var initialFieldValues = Immutable.Map({})
-  .set(FIELDS.SALARY, 75000)
+  .set(FIELDS.SALARY, 65000)
   .set(FIELDS.BONUS, 15)
   .set(FIELDS.BANK_HOLIDAYS, 12)
   .set(FIELDS.HOLIDAYS, 25)
   .set(FIELDS.SICK_DAYS, 3)
   .set(FIELDS.PENSION, 12.5)
-  
+  .set(FIELDS.VAT_FLAT_RATE, 14.5)
+  .set(FIELDS.VAT_EXPENSES, 4000)
+
 const initialState = Immutable.Map({inputs: initialFieldValues});
 
 const Store = createStore(calcAppReducer, initialState)

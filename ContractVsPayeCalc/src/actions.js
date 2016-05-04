@@ -12,7 +12,7 @@ export const FIELDS = {
   BONUS: "Bonus",
   BONUS_CALC: "Bonus Value",
   PENSION: "Employer Pension Contribution",
-  PENSION_CALC: "Employer Pension Contribution Value",  
+  PENSION_CALC: "Employer Pension Contribution Value",
   GROSS_PAY: "Gross Pay",
   TAXABLE_PAY: "Taxable Pay",
   TAX_PA_LIMIT: "Tax Personal Allowance",
@@ -21,30 +21,32 @@ export const FIELDS = {
   HOLIDAYS: "Holiday Days",
   SICK_DAYS: "Sick Days",
   WORKING_DAYS: "Working Days",
+  ADJUSTED_PERSONAL_ALLOWANCE: "Adjusted Personal Allowance",
+  PAYE_TAX_BANDS: "PAYE Tax",
+  PAYE_TAX_BANDS_TOTAL: "PAYE Tax Total",
+  EMPLOYEE_NI: "Emplyee National Insurance",
+  EMPLOYEE_NI_TOTAL: "Emplyee National Insurance Total",
+  EMPLOYER_NI: "Employer National Insurance",
+  EMPLOYER_NI_TOTAL: "Employer National Insurance Total",
+  TOTAL_COST_TO_EMPLOYER: "Total Cost to Employer",
+  TOTAL_NET_INCOME: "Total Net Income",
+  TOTAL_INCOME: "Total Income",
+  DAILY_COST_TO_EMPLOYER: "Daily Cost to Employer",
+  DAILY_NET_INCOME: "Daily Net Income",
+  VAT_FLAT_RATE: "VAT Flat Rate",
+  VAT_INCOME_RATE: "VAT Income Rate",
+  VAT_INCOME: "VAT Income",
+  VAT_RECLAIM: "VAT Reclaim",
+  VAT_EXPENSES: "VAT-able Expenses",
+  VAT_RECLAIM: "VAT Reclaim",
+  EXPENSES: "Expenses",
 };
 
-export const PayeTaxBands = Immutable.fromJS([
-  {
-    Band: "Personal Allowance",
-    Limit: 11000,
-    Rate: 0 
-  },
-  {
-    Band: "Basic Rate",
-    Limit: 43000,
-    Rate: 20 
-  },
-  {
-    Band: "Higher Rate",
-    Limit: 150000,
-    Rate: 40 
-  },
-  {
-    Band: "Additional Rate",
-    Limit: Number.MAX_SAFE_INTEGER,
-    Rate: 45
-  },
-]);
+export function get(inputs, field){
+  return inputs.get(field) || 0;
+}
+
+
 
 /*
  * other constants
