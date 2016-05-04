@@ -4,6 +4,7 @@ import { FIELDS, get } from "./actions.js"
 import { CalcPAYEIncomeTaxBands } from "./bands/incomePAYE"
 import { CalcEmployeeNI } from "./bands/employeeNI"
 import { CalcEmployerNI } from "./bands/employerNI"
+import { CalcDividendsTax } from "./bands/dividends"
 
 export function CalcPersonalAllowance(income){
   if(income <= 100000) return 11000;
@@ -124,10 +125,50 @@ function CalcContractVAT(inputs) {
 }
 
 function CalcContractExpenses(inputs) {
-    var pay = get(inputs, FIELDS.TOTAL_COST_TO_EMPLOYER);
+    var expenses = get(inputs, FIELDS.EXPENSES);
+
+    var travel = get(inputs, FIELDS.TRAVEL_EXPENSES);
+    var network = get(inputs, FIELDS.NETWORKING_EXPENSES);
+    var office = get(inputs, FIELDS.OFFICE_EXPENSES);
+    var other = get(inputs, FIELDS.OTHER_EXPENSES);
+
+    var expenses = expenses + travel + network + office + other;
+
+    return inputs.set(FIELDS.EXPENSES, expenses);
+}
 
 
-    return inputs
+function CalcCompanyProfit(inputs) {
+  var income = get(inputs, FIELDS.TOTAL_COST_TO_EMPLOYER);
+  var vatIncome = get(inputs, FIELDS.VAT_INCOME);
+  var vatReclaim = get(inputs, FIELDS.VAT_RECLAIM);
+
+  var pay = get(inputs, FIELDS.DIRECTORS_PAY);
+  var expenses = get(inputs, FIELDS.EXPENSES);
+
+  var profit = income + vatIncome + vatReclaim - pay - expenses;
+
+  return inputs.set(FIELDS.COMPANY_PROFIT, profit);
+}
+
+function Reset(inputs) {
+    return inputs.set(FIELDS.EXPENSES, 0);
+}
+
+
+function CalcDirectorNetIncome(inputs) {
+  var days = get(inputs, FIELDS.WORKING_DAYS);
+  var pay = get(inputs, FIELDS.DIRECTORS_PAY);
+  var profit = get(inputs, FIELDS.COMPANY_PROFIT);
+  var expenses = get(inputs, FIELDS.EXPENSES);
+  var dividendTax = get(inputs, FIELDS.DIVIDEND_TAX_TOTAL);
+
+  var income = pay + profit + expenses - dividendTax;
+  var daily = income / days;
+
+  return inputs
+  .set(FIELDS.DIRECTOR_NET_INCOME, income)
+  .set(FIELDS.DIRECTOR_DAILY_NET_INCOME, daily)
 }
 
 function Reset(inputs) {
@@ -154,6 +195,11 @@ export default function CalcPaye(inputs) {
 
   res = CalcContractVAT(res);
   res = CalcContractExpenses(res);
+
+  res = CalcCompanyProfit(res);
+
+  res = CalcDividendsTax(res);
+  res = CalcDirectorNetIncome(res);
 
   return res;
 }

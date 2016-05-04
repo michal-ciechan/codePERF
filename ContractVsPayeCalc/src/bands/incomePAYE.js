@@ -1,7 +1,6 @@
 import Immutable, {List} from "immutable";
 import { CalcBands } from "./shared"
 import { FIELDS, get } from "../actions.js"
-import { PayeTaxBands } from "../actions.js"
 
 List.prototype.Sum = function(x) {
   var sum = 0;

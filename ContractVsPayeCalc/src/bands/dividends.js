@@ -12,33 +12,38 @@ List.prototype.Sum = function(x) {
   return sum;
 }
 
-export const TaxBandsEmployeeNI = Immutable.fromJS([
+export const DividendTaxBands = Immutable.fromJS([
   {
     Band: "Free",
-    Limit: 672 * 12,
+    Limit: 11000 - 8000 + 5000, // 11K PA - 8k Directors Pay + 5k Free Divcidend
     Rate: 0
   },
   {
     Band: "Basic Rate",
-    Limit: 3583 * 12,
-    Rate: 12
+    Limit: 43000 - 3000,
+    Rate: 7.5
+  },
+  {
+    Band: "Higher Rate",
+    Limit:150000 - 3000,
+    Rate: 32.5
   },
   {
     Band: "Higher Rate",
     Limit: Number.MAX_SAFE_INTEGER,
-    Rate: 2
+    Rate: 38.1
   },
 ]);
 
-export function CalcEmployeeNI(inputs) {
+export function CalcDividendsTax(inputs) {
 
-  var pay = get(inputs, FIELDS.TAXABLE_PAY);
-  var bands = TaxBandsEmployeeNI;
+  var pay = get(inputs, FIELDS.COMPANY_PROFIT);
+  var bands = DividendTaxBands;
 
   var res = CalcBands(bands, pay);
   var sum = res.Sum((x) => x.get("Tax"));
 
   return inputs
-          .set(FIELDS.EMPLOYEE_NI, res)
-          .set(FIELDS.EMPLOYEE_NI_TOTAL, sum);
+          .set(FIELDS.DIVIDEND_TAX, res)
+          .set(FIELDS.DIVIDEND_TAX_TOTAL, sum);
 }

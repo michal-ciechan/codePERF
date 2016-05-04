@@ -113,6 +113,9 @@ const PayeFieldsView = () => (
     <div>
       <Input field={FIELDS.SALARY} format={formats.Currency} />
       <Input field={FIELDS.BONUS} format={formats.Percent} />
+      <Output field={FIELDS.DAILY_COST_TO_EMPLOYER}  format={formats.Currency} />
+      <Output field={FIELDS.DAILY_NET_INCOME}  format={formats.Currency} />
+      <Output field={FIELDS.DIRECTOR_DAILY_NET_INCOME} format={formats.Currency} />
       <Output field={FIELDS.BONUS_CALC}  format={formats.Currency} />
       <Output field={FIELDS.GROSS_PAY} format={formats.Currency} />
       <Output field={FIELDS.TAXABLE_PAY} format={formats.Currency} />
@@ -129,15 +132,21 @@ const PayeFieldsView = () => (
       <Input field={FIELDS.HOLIDAYS} />
       <Input field={FIELDS.SICK_DAYS} />
       <Output field={FIELDS.WORKING_DAYS} />
-      <Output field={FIELDS.DAILY_NET_INCOME}  format={formats.Currency} />
-      <Output field={FIELDS.DAILY_COST_TO_EMPLOYER}  format={formats.Currency} />
       <Input field={FIELDS.VAT_FLAT_RATE} format={formats.Percent} />
       <Output field={FIELDS.VAT_INCOME_RATE} format={formats.Percent} />
       <Output field={FIELDS.VAT_INCOME} format={formats.Currency} />
       <Input field={FIELDS.VAT_EXPENSES} format={formats.Currency} />
       <Output field={FIELDS.VAT_RECLAIM} format={formats.Currency} />
+      <Input field={FIELDS.TRAVEL_EXPENSES} format={formats.Currency} />
+      <Input field={FIELDS.NETWORKING_EXPENSES} format={formats.Currency} />
+      <Input field={FIELDS.OFFICE_EXPENSES} format={formats.Currency} />
+      <Input field={FIELDS.OTHER_EXPENSES} format={formats.Currency} />
       <Output field={FIELDS.EXPENSES} format={formats.Currency} />
-    </div>
+      <Output field={FIELDS.DIRECTORS_PAY} format={formats.Currency} />
+      <Output field={FIELDS.COMPANY_PROFIT} format={formats.Currency} />
+      <Bands field={FIELDS.DIVIDEND_TAX} />
+      <Output field={FIELDS.DIRECTOR_NET_INCOME} format={formats.Currency} />
+    </div> 
 );
 
 export default connect()(PayeFieldsView)

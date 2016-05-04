@@ -40,6 +40,16 @@ export const FIELDS = {
   VAT_EXPENSES: "VAT-able Expenses",
   VAT_RECLAIM: "VAT Reclaim",
   EXPENSES: "Expenses",
+  TRAVEL_EXPENSES: "Travel Expenses",
+  NETWORKING_EXPENSES: "Networking Expenses",
+  OFFICE_EXPENSES: "Office Expenses",
+  OTHER_EXPENSES: "Other Expenses",
+  COMPANY_PROFIT: "Company Profit",
+  DIRECTORS_PAY: "Directors Pay",
+  DIVIDEND_TAX: "Dividend Tax",
+  DIVIDEND_TAX_TOTAL: "Dividend Tax Total",
+  DIRECTOR_NET_INCOME: "Director Net Income",
+  DIRECTOR_DAILY_NET_INCOME: "Contractor Daily Net Income",
 };
 
 export function get(inputs, field){

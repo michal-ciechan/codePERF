@@ -1,8 +1,8 @@
-import { createStore } from 'redux'
-import Immutable from 'immutable';
-import {calcAppReducer} from './reducers'
+import { createStore } from "redux"
+import Immutable from "immutable";
+import {calcAppReducer} from "./reducers"
 
-import { FIELDS, ForceRecalc } from './actions'
+import { FIELDS, ForceRecalc } from "./actions"
 
 // Initial Field Values
 var initialFieldValues = Immutable.Map({})
@@ -14,6 +14,11 @@ var initialFieldValues = Immutable.Map({})
   .set(FIELDS.PENSION, 12.5)
   .set(FIELDS.VAT_FLAT_RATE, 14.5)
   .set(FIELDS.VAT_EXPENSES, 4000)
+  .set(FIELDS.TRAVEL_EXPENSES, 2400)
+  .set(FIELDS.NETWORKING_EXPENSES, 600)
+  .set(FIELDS.OFFICE_EXPENSES, 1200)
+  .set(FIELDS.OTHER_EXPENSES, 5000)
+  .set(FIELDS.DIRECTORS_PAY, 8000)
 
 const initialState = Immutable.Map({inputs: initialFieldValues});
 
