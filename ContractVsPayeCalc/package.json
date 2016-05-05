@@ -56,14 +56,17 @@
     "webpack-dev-server": "^1.12.1"
   },
   "dependencies": {
+    "bootstrap": "^3.3.6",
     "chai-immutable": "^1.5.4",
     "deep-freeze": "0.0.1",
+    "file-loader": "^0.8.5",
     "immutable": "^3.8.0",
     "linq": "^3.0.5",
     "react": "^0.14.6",
     "react-dom": "^0.14.6",
     "react-redux": "^4.4.5",
     "redux": "^3.4.0",
-    "redux-immutable": "^3.0.6"
+    "redux-immutable": "^3.0.6",
+    "url-loader": "^0.5.7"
   }
 }

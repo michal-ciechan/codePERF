@@ -46,13 +46,14 @@ const mapStateToPropsInput = (state, props) => {
     return res;
 };
 const InputView = ({ title, value, formattedValue, field, onChange }) => (
-    <div>
-        <span className="key">{title}: </span>
+    <div className="form-group">
+        <label className="col-sm-4 control-label">{title}: </label>
         <input type="text"
+            className="col-sm-2 form-control"
             placeholder={title}
             value={value}
             onChange={(event) => onChange(event.target.value, field) } />
-        <span className="value">{formattedValue}</span>
+          <p className="col-sm-3 form-control-static value">{formattedValue}</p>
     </div>
 );
 export const Input = connect(
@@ -110,7 +111,7 @@ const Bands = connect(mapStateToPropsBands)(BandsView);
 
 // Component
 const PayeFieldsView = () => (
-    <div>
+    <div className="form-horizontal">
       <Input field={FIELDS.SALARY} format={formats.Currency} />
       <Input field={FIELDS.BONUS} format={formats.Percent} />
       <Output field={FIELDS.DAILY_COST_TO_EMPLOYER}  format={formats.Currency} />
@@ -146,7 +147,7 @@ const PayeFieldsView = () => (
       <Output field={FIELDS.COMPANY_PROFIT} format={formats.Currency} />
       <Bands field={FIELDS.DIVIDEND_TAX} />
       <Output field={FIELDS.DIRECTOR_NET_INCOME} format={formats.Currency} />
-    </div> 
+    </div>
 );
 
 export default connect()(PayeFieldsView)
