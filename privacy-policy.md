@@ -117,13 +117,17 @@ This company helps us to understand your use of the apps. In association with th
 
 You can find Privacy Policies of our Ad partner here:
 
-Google Admob: https://policies.google.com/technologies/partner-sites
+- Google Admob: https://policies.google.com/technologies/partner-sites
 
 We are not displaying behavioral or interest-based advertising in our apps. 
 
-Codeperf Ltd complies the Children Act 2004, which is an Act of the Parliament of the United Kingdom. The Act amended the Children Act 1989, largely in consequence of the Victoria Climbié inquiry. The Act is now the basis for most official administration considered helpful to children, notably bringing all local government functions of children's welfare and education under the statutory authority of local Directors of Children's Services.
+Codeperf Ltd complies with the following policies:
 
-CodePerf Ltd also complies with the Children’s Online Privacy Protection Act (“COPPA”), a U.S. law designed to protect the online privacy of children. GoKids! takes precautions designed to protect the online privacy of children, and we encourage parents to take an active role in protecting their children’s privacy by discussing this Privacy Policy with them.
+- **Children Act 2004**, which is an Act of the Parliament of the United Kingdom. The Act amended the Children Act 1989, largely in consequence of the Victoria Climbié inquiry. The Act is now the basis for most official administration considered helpful to children, notably bringing all local government functions of children's welfare and education under the statutory authority of local Directors of Children's Services.
+
+- **EU General Data Protection Regulation** (GDPR), which is a regulation in EU law on data protection and privacy in the European Union (EU) and the European Economic Area (EEA). It also addresses the transfer of personal data outside the EU and EEA areas.
+
+- **Children’s Online Privacy Protection Act** (“COPPA”), a U.S. law designed to protect the online privacy of children. GoKids! takes precautions designed to protect the online privacy of children, and we encourage parents to take an active role in protecting their children’s privacy by discussing this Privacy Policy with them.
 
 ## Changes To This Privacy Policy
 
